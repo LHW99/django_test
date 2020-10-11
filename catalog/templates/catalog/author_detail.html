@@ -4,6 +4,11 @@
   <h1>Author: {{ author.last_name }}, {{ author.first_name }}</h1>
   <p>{{ author.date_of_birth }} - {{ author.date_of_death }}
 
+  {% if perms.catalog.can_mark_returned %}
+    <p><a href="{% url 'author_update' author.id %}">Update Author</a></p>
+    <p><a href="{% url 'author_delete' author.id %}">Delete Author</a></p>
+  {% endif %}
+
   <div style="margin-left:20px;margin-top:20px">
     <h4>Books</h4>
 
