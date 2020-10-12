@@ -144,15 +144,3 @@ class BookUpdate(UpdateView):
 class BookDelete(DeleteView):
   model = Book
   success_url = reverse_lazy('books')
-
-class BookCopyCreate(CreateView):
-  model = BookInstance
-  fields = '__all__'
-
-class BookCopyUpdate(UpdateView):
-  model = BookInstance
-  fields = '__all__'
-
-class BookCopyDelete(DeleteView):
-  model = BookInstance
-  success_url = reverse_lazy('all-book-copies')
