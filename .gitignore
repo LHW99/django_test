@@ -1,2 +1,7 @@
 django_test/
+
+# text backup files
+*.bak
+
+#Database
 *.sqlite3
